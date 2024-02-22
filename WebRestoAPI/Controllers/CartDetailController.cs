@@ -25,10 +25,10 @@ namespace WebRestoAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CartDetail>>> GetCartDetails()
         {
-          if (_context.CartDetails == null)
-          {
-              return NotFound();
-          }
+            if (_context.CartDetails == null)
+            {
+                return NotFound();
+            }
             try
             {
                 var cartdetails = _context.CartDetails
@@ -36,12 +36,13 @@ namespace WebRestoAPI.Controllers
                     .Include(p => p.Product)
                     .ToList();
                 return await _context.CartDetails.ToListAsync();
-        }
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Error: {ex.Message}");
             }
         }
+
 
         // GET: api/CartDetail/5
         [HttpGet("{id}")]
@@ -100,11 +101,10 @@ namespace WebRestoAPI.Controllers
             try
             {
                 // Cari buku dan user berdasarkan Id_Buku dan Id_User
-                var cart = await _context.Carts.FindAsync(InputCartDetail.Cart_Id);
                 var product = await _context.Products.FindAsync(InputCartDetail.Product_Id);
 
 
-                if (cart != null && product != null)
+                if (product != null)
                 {
                     decimal totalHarga = product.Harga * InputCartDetail.Qty;
 
@@ -113,7 +113,7 @@ namespace WebRestoAPI.Controllers
                     cartdetail.Qty = InputCartDetail.Qty;
                     cartdetail.TotalHarga = totalHarga;
                     cartdetail.Catatan = InputCartDetail.Catatan;
-                    cartdetail.Cart = cart;
+
                     cartdetail.Product = product;
                     // Tambahkan peminjaman ke DbContext
                     _context.CartDetails.Add(cartdetail);

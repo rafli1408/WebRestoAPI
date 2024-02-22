@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebRestoAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b36dcb4093dc261b593a1828666abc37d7a8cd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebRestoAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebRestoAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

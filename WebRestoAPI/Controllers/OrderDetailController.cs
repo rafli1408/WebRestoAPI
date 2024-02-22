@@ -104,7 +104,7 @@ namespace WebRestoAPI.Controllers
                 var product = await _context.Products.FindAsync(InputOrderDetail.Product_Id);
 
 
-                if (order != null && product != null)
+                if ( product != null)
                 {
                     decimal totalHarga = product.Harga * InputOrderDetail.Qty;
 
@@ -114,7 +114,7 @@ namespace WebRestoAPI.Controllers
                     orderdetail.Qty = InputOrderDetail.Qty;
                     orderdetail.TotalHarga = totalHarga;
                     orderdetail.Catatan = InputOrderDetail.Catatan;
-                    orderdetail.Order = order;
+                    
                     orderdetail.Product = product;
                     // Tambahkan peminjaman ke DbContext
                     _context.OrderDetails.Add(orderdetail);

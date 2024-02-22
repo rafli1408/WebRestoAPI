@@ -9,7 +9,7 @@ public partial class Order
     [Key]
     public long Id { get; set; }
 
-    public string NoBill { get; set; } = null!;
+    public string? NoBill { get; set; }
 
     public string Nama { get; set; } = null!;
 

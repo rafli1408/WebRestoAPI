@@ -252,3 +252,4 @@ P:\asp.net\API\WebRestoAPI\WebRestoAPI\obj\Debug\net7.0\refint\WebRestoAPI.dll
 P:\asp.net\API\WebRestoAPI\WebRestoAPI\obj\Debug\net7.0\WebRestoAPI.pdb
 P:\asp.net\API\WebRestoAPI\WebRestoAPI\obj\Debug\net7.0\WebRestoAPI.genruntimeconfig.cache
 P:\asp.net\API\WebRestoAPI\WebRestoAPI\obj\Debug\net7.0\ref\WebRestoAPI.dll
+P:\asp.net\API\WebRestoAPI\WebRestoAPI\obj\Debug\net7.0\WebRestoAPI.sourcelink.json
